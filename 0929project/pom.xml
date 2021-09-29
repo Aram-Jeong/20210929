@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>co.micol.prj</groupId>
+  <artifactId>0929project</artifactId>
+  <version>0.0.1</version>
+  <packaging>jar</packaging>
+  
+  <properties>  <!-- 내부에서 사용할 변수 정의 -->
+  <java.version>11</java.version>
+  </properties>
+  
+  <dependencies>  <!-- 사용할 외부라이브러리 정의 -->
+  <!-- maven repository에서 검색하여 추가 -->
+  </dependencies>
+  
+  <build>
+	<resources>
+		<resource>
+			<directory>src/main/resources</directory>
+		</resource>
+	</resources>
+  	
+  	<plugins>
+         <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+             <artifactId>maven-compiler-plugin</artifactId>
+             <version>3.8.1</version>
+             <configuration>
+                 <source>${java.version}</source> 
+                 <target>${java.version}</target>
+                 <compilerArgument>-Xlint:all</compilerArgument>
+                 <showWarnings>true</showWarnings>
+                 <showDeprecation>true</showDeprecation>
+             </configuration>
+         </plugin>
+     </plugins>
+  </build>
+</project>
